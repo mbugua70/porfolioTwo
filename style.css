@@ -359,6 +359,28 @@ i {
   }
 }
 
+@media screen and (max-width: 390px) {
+  .triangle {
+    top: 600px;
+    left: 100px;
+  }
+  .polygon {
+    top: 800px;
+    left: 150px;
+  }
+
+  .flex--container {
+    column-gap: 20px;
+  }
+
+  .box--one,
+  .box--two {
+    margin-block: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .main--style {
     padding-top: 6rem;
