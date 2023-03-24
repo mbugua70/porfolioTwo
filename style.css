@@ -364,12 +364,16 @@ i {
   .container {
     overflow-x: hidden;
   }
+  .triangle--two {
+    position: absolute;
+    top: 100px;
+  }
   .triangle {
     top: 600px;
     left: 100px;
   }
   .square {
-    top: 340px;
+    top: 390px;
   }
   .polygon {
     top: 800px;
