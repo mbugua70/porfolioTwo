@@ -1,0 +1,381 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  background-color: rgb(74, 74, 74);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid gray;
+  opacity: 0.1;
+  animation-name: circle;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-delay: 5s;
+}
+
+.triangle {
+  position: absolute;
+  top: 300px;
+  left: 800px;
+  opacity: 0.1;
+  width: 100px;
+  height: 0;
+  background-color: transparent;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid gray;
+  border-top: 100px solid transparent;
+  animation-name: triangle;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-delay: 10s;
+  animation-timing-function: ease-in;
+}
+
+.square {
+  position: absolute;
+  bottom: 200px;
+  left: 80px;
+  opacity: 0.1;
+  width: 150px;
+  height: 100px;
+  background-color: gray;
+  animation-name: squaresize;
+  animation-duration: 22s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-delay: 10s;
+}
+
+.polygon {
+  position: absolute;
+  top: 20px;
+  left: 500px;
+  opacity: 0.1;
+  margin-top: 150px;
+  width: 150px;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 100px solid gray;
+  animation-name: polygon;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-delay: 30s;
+  animation-timing-function: ease-in-out;
+}
+
+.triangle--two {
+  opacity: 0.1;
+  width: 100px;
+  height: 0;
+  background-color: transparent;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid gray;
+  border-top: 100px solid transparent;
+  animation-name: triangletwo;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-delay: 30s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes squaresize {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes triangletwo {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes triangle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle {
+  0% {
+    top: 20px;
+    right: 100px;
+  }
+
+  50% {
+    background-color: gray;
+    top: 150px;
+    right: 100px;
+  }
+
+  100% {
+    top: 20px;
+    right: 100px;
+  }
+}
+
+@keyframes polygon {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.main--style {
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.flex--container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 2rem auto;
+  justify-content: space-around;
+}
+
+.box--one {
+  width: 46%;
+  height: 100%;
+}
+
+.box--one .image {
+  width: 15rem;
+  height: 16rem;
+  margin: 1.5rem auto;
+  position: relative;
+}
+.line {
+  width: 15rem;
+  height: 16rem;
+  position: absolute;
+  border: 2px solid #fff;
+  top: 18px;
+  border-radius: 20px;
+  right: 20px;
+  z-index: -1;
+}
+.box--two {
+  width: 54%;
+  height: 100%;
+}
+
+.social--media {
+  width: 100%;
+  height: 3rem;
+  background-color: rgb(74, 74, 74);
+  margin-top: 2rem;
+  border-radius: 25px;
+  /* box-shadow: 0px 3px 4px 2px rgb(18, 18, 18); */
+  box-shadow: -1px -2px 2px 2px gray;
+  cursor: pointer;
+}
+
+.social--media:hover {
+  box-shadow: -1px -2px 2px 2px rgba(128, 128, 128, 0.7);
+}
+
+.about {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.about h1 {
+  margin-bottom: 0;
+  padding-bottom: 16px;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Rancho", cursive;
+}
+
+.about article p {
+  margin: 0;
+  padding-top: 10px;
+  color: rgb(172, 172, 172);
+}
+
+.logo {
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #fff;
+  width: min-content;
+  padding: 4px;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+
+i {
+  color: #fff;
+}
+
+.social--media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+}
+
+.social--media span p {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+  .flex--container {
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .polygon {
+    top: 300px;
+  }
+  .triangle {
+    top: 600px;
+    left: 400px;
+  }
+  .container {
+    min-height: 100%;
+  }
+
+  .flex--container {
+    margin-top: 4rem;
+    gap: 4rem;
+  }
+
+  .box--one {
+    width: 40%;
+    margin-top: 2rem;
+  }
+  .box--two {
+    width: 50%;
+
+    margin-top: 2rem;
+  }
+  .social--media {
+    margin-top: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+  }
+
+  .polygon {
+    left: 280px;
+  }
+  .triangle {
+    left: 300px;
+  }
+  .main--style {
+    margin: 4rem auto;
+  }
+  .flex--container {
+    flex-direction: column;
+    width: 90%;
+    margin-block: auto;
+  }
+  .box--one {
+    width: 90%;
+  }
+  .box--two {
+    width: 90%;
+    margin-block: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main--style {
+    padding-top: 6rem;
+  }
+
+  .polygon {
+    top: 800px;
+    left: 100px;
+  }
+  .triangle {
+    left: 120px;
+  }
+  .triangle--two {
+    position: absolute;
+    bottom: 100px;
+  }
+  .square {
+    top: 1200px;
+  }
+}
