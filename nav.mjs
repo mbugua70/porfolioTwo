@@ -5,6 +5,7 @@ const idThree = document.getElementById("three");
 const idFour = document.getElementById("four");
 const idFive = document.getElementById("five");
 const idSix = document.getElementById("six");
+const showEl = document.getElementById("show--container");
 
 const ids = [idOne, idTwo, idThree, idFour, idFive, idSix];
 ids.map((items) => {
@@ -16,3 +17,13 @@ ids.map((items) => {
     });
   });
 });
+
+window.addEventListener(
+  "load",
+  () => {
+    showEl.style.width = "100%";
+    showEl.style.opacity = "1";
+    showEl.style.transition = "all ease-out 2s";
+  },
+  false
+);
