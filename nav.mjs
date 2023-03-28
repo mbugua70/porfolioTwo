@@ -23,7 +23,7 @@ window.addEventListener(
   () => {
     showEl.style.width = "100%";
     showEl.style.opacity = "1";
-    showEl.style.transition = "all ease-out 2s";
+    showEl.style.transition = "all ease-out 900ms";
   },
   false
 );
